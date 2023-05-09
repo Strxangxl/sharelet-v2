@@ -1,8 +1,8 @@
-import express from 'express'
+import express from "express";
 const app = express();
-import http from 'http'
+import http from "http";
 const server = http.createServer(app);
-import { Server } from 'socket.io'
+import { Server } from "socket.io";
 const io = new Server(server);
 
 app.use(express.static("site"));
@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log("a user connected", socket.id);
+  console.log("a user connected");
   socket.on("text-change-from-client", (data) => {
     socket.broadcast.emit("text-change-server", data);
   });

@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+#editor {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100%;
+  max-width: 600px;
+  min-height: 150px;
+  resize: none;
+  overflow: hidden;
+  /* border: none; */
+  border: 1px solid #ccc;
+  background-color: #2d2d2d;
+  color: #fff;
+}
+#editor::placeholder {
+  color: #c4c4c4;
+}
+#editor::-webkit-scrollbar {
+  width: 8px;
+}
+#editor::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+#editor::-webkit-scrollbar-track {
+  background-color: #2d2d2d;
+}
+
+/* media query for small screens */
+@media only screen and (max-width: 600px) {
+  #editor {
+    max-width: 400px;
+    min-height: 100px;
+  }
+}
+
+/* dark mode color scheme */
+a {
+  color: #fff;
+}
+
+button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #777;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+::-moz-selection {
+  background-color: #777;
+  color: #fff;
+}
+
+::selection {
+  background-color: #777;
+  color: #fff;
+}
